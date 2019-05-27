@@ -1,5 +1,7 @@
 from typing import List
 import pdb
+
+
 class Solution:
     def maxArea(self, height: List[int]) -> int:
         left, right = 0, len(height) - 1
@@ -13,7 +15,6 @@ class Solution:
                 left += 1
         return area
             
-
 
 if __name__ == "__main__":
     lst = [1, 1]

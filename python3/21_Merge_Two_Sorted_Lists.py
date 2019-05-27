@@ -4,11 +4,15 @@ class ListNode:
         self.val = x
         self.next = None
 
+
 class Solution:
     def mergeTwoLists(self, l1: ListNode, l2: ListNode) -> ListNode:
-        if not l1 and not l2:   return None
-        elif not l1:            return l2
-        elif not l2:            return l1
+        if not l1 and not l2:
+            return None
+        elif not l1:
+            return l2
+        elif not l2:
+            return l1
         l3, p = None, None
         while l1 and l2:
             if l1.val <= l2.val:
@@ -27,5 +31,3 @@ class Solution:
         if l2:
             p.next = l2
         return l3
-
-

@@ -4,6 +4,7 @@ class ListNode:
         self.val = x
         self.next = None
 
+
 class Solution:
     def removeNthFromEnd(self, head: ListNode, n: int) -> ListNode:
         fst, mid, last = None, None, head

@@ -1,14 +1,17 @@
 from typing import List
 # Definition for singly-linked list.
+
+
 class ListNode:
     def __init__(self, x):
         self.val = x
         self.next = None
 
+
 def createList(lst: List[int]) -> ListNode:
     ln, p = None, None
     for val in lst:
-        if ln == None:
+        if ln is None:
             ln = ListNode(val)
             p = ln
         else:
@@ -20,7 +23,7 @@ class Solution:
     def addTwoNumbers(self, l1: ListNode, l2: ListNode) -> ListNode:
         p, q = l1, l2
         rst, c = [], 0
-        while p != None and q != None:
+        while p and q:
             tmp = p.val + q.val
             if tmp + c >= 10:
                 rst.append(tmp + c - 10)
@@ -30,14 +33,14 @@ class Solution:
                 c = 0
             p = p.next
             q = q.next
-        while p != None:
+        while p:
             if c == 1 and p.val == 9:
                 rst.append(0)
             else:
                 rst.append(p.val + c)
                 c = 0
             p = p.next
-        while q != None:
+        while q:
             if c == 1 and q.val == 9:
                 rst.append(0)
             else:

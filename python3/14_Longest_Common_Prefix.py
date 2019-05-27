@@ -1,7 +1,9 @@
 from typing import List
+
+
 class Solution:
     def longestCommonPrefix(self, strs: List[str]) -> str:
-        if strs == []:
+        if strs:
             return ""
         idx = 0
         for i in range(len(strs[0])):
@@ -13,13 +15,13 @@ class Solution:
                 if strs[j][i] != c:
                     flag = False
                     break
-            if flag == False:
+            if flag is False:
                 break
             idx = i + 1
         return strs[0][:idx]
-    
+
     def longestCommonPrefix2(self, strs: List[str]) -> str:
-        if strs == []:
+        if strs:
             return ""
         rst = ""
         lst = list(zip(*strs))
@@ -30,7 +32,8 @@ class Solution:
             else:
                 break
         return rst
-        
+
+
 if __name__ == "__main__":
-    strs = ["flower","flow","flight"]
-    print(Solution().longestCommonPrefix2(strs))
+    s = ["flower", "flow", "flight"]
+    print(Solution().longestCommonPrefix2(s))

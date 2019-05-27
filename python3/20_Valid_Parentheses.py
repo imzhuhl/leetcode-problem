@@ -1,4 +1,6 @@
 import pdb
+
+
 class Solution:
     def isValid(self, s: str) -> bool:
         st = []
@@ -17,6 +19,7 @@ class Solution:
         if st:
             return False
         return True
+
 
 if __name__ == "__main__":
     print(Solution().isValid(")"))
