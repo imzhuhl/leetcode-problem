@@ -37,7 +37,7 @@ class Solution:
             if not lists:
                 return None
             if len(lists) == 1:
-                return merge(lists[0], None)
+                return lists[0]
             mid = len(lists) // 2
             return merge(div(lists[:mid]), div(lists[mid:]))
 
